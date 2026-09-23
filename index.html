@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="KUROKO — Rethinking Content Moderation via Severity-Aware Ranking. EMNLP 2026 Main Conference paper by Bilibili Inc.">
+  <title>KUROKO · Severity-Aware Content Moderation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="KUROKO home"><span class="brand-mark">K</span><span>KUROKO</span></a>
+    <nav>
+      <a href="#why">Why KUROKO</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#paper">Paper</a>
+    </nav>
+    <a class="header-cta" href="paper.pdf" target="_blank" rel="noreferrer">EMNLP ’26 <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> EMNLP 2026 · MAIN CONFERENCE</div>
+        <h1>Rethinking<br><em>Content Moderation</em><br>via Severity-Aware Ranking</h1>
+        <p class="lede">A production-scale moderation system that moves beyond rigid yes/no labels to understand the gray area — with human-aligned severity, transparent reasoning, and efficient deployment.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#paper">Read the paper <span>↗</span></a>
+          <a class="button button-quiet" href="#pipeline">Explore the method <span>↓</span></a>
+        </div>
+        <div class="author-line"><strong>Bilibili Inc.</strong><span class="rule"></span><span>Yang Ou · Jielei Zhang · Yu Dai · Zian Yang · Run Yang · Xiang Li · Weihang Wang · Xueqian Zhao · Peiyi Li · Longwen Gao</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="art-label label-top">severity / 00—100</div>
+        <img src="images/kuroko1.png" alt="KUROKO character at EMNLP 2026" class="hero-character">
+        <div class="score-card"><span class="score-kicker">A new moderation axis</span><strong><span>binary</span> → severity</strong><span class="score-caption">fine-grained · contextual · actionable</span></div>
+      </div>
+    </section>
+
+    <section class="signal-strip"><div class="section-wrap signal-inner"><div><span class="signal-number">01</span><span>Human-centric</span></div><div><span class="signal-number">02</span><span>Verifiable alignment</span></div><div><span class="signal-number">03</span><span>Cost-efficient at scale</span></div><div class="signal-note">Built for the gray area.</div></div></section>
+
+    <section id="why" class="section-wrap section why-section">
+      <div class="section-heading"><span class="section-index">01 / THE PROBLEM</span><h2>The risk spectrum is<br><em>continuous.</em></h2></div>
+      <div class="why-grid"><div class="why-copy"><p>Traditional moderation collapses nuanced content into a binary decision. That makes benign-but-sensitive samples look like violations, while implicit violations slip through the boundary.</p><p>KUROKO treats moderation as a ranked decision over a continuous severity spectrum — matching how people actually review content and how platforms enforce policy.</p><div class="quote">“From a rigid boundary<br>to a <em>useful signal.</em>”</div></div><div class="visual-frame"><img src="images/matters3.png" alt="Severity-aware ranking compared with binary classification"><span class="frame-caption">Figure 1 · Severity-aware ranking</span></div></div>
+    </section>
+
+    <section id="pipeline" class="section section-tint">
+      <div class="section-wrap"><div class="section-heading pipeline-heading"><span class="section-index">02 / THE SYSTEM</span><h2>One system.<br><em>Three deliberate moves.</em></h2><p>KUROKO connects data, alignment, and deployment into one coarse-to-fine moderation loop.</p></div><div class="pipeline-layout"><div class="pipeline-visual visual-frame"><img src="images/fig2.png" alt="KUROKO two-stage training and coarse-to-fine deployment pipeline"><span class="frame-caption">Figure 2 · KUROKO pipeline</span></div><div class="moves"><article class="move"><span class="move-no">01</span><div><h3>Rank the gray area</h3><p>Generate a severity score with structured rule matching and rationale, so close cases stay distinguishable.</p></div></article><article class="move"><span class="move-no">02</span><div><h3>Verify the reasoning</h3><p>SACRM turns policy tiers into programmatic rewards that are inspectable, reproducible, and actionable.</p></div></article><article class="move"><span class="move-no">03</span><div><h3>Route only what matters</h3><p>A lightweight recall stage filters traffic before fine-grained inspection, making production-scale inference practical.</p></div></article></div></div></div>
+    </section>
+
+    <section class="section-wrap section evidence-section"><div class="section-heading"><span class="section-index">03 / THE EVIDENCE</span><h2>Designed for<br><em>real moderation loops.</em></h2></div><div class="evidence-grid"><div class="evidence-card"><div class="evidence-top"><span class="evidence-tag">DATA ENGINE</span><span class="evidence-arrow">↗</span></div><h3>Structured data<br>from policy logic</h3><p>Expert audit logic becomes training signal through a multi-stage, verifiable data pipeline.</p><img src="images/data_pipe.png" alt="KUROKO structured data pipeline"></div><div class="evidence-card evidence-card-wide"><div class="evidence-top"><span class="evidence-tag">CASE STUDY</span><span class="evidence-arrow">↗</span></div><h3>Context changes<br>the right action</h3><p>The same surface cue can lead to a different enforcement decision when context and severity change.</p><img src="images/case_study.png" alt="KUROKO case studies showing different moderation outcomes"></div></div></section>
+
+    <section id="paper" class="paper-section"><div class="section-wrap paper-inner"><div><span class="section-index">04 / THE PAPER</span><h2>Read the<br><em>full story.</em></h2><p>Rethinking Content Moderation via Severity-Aware Ranking<br><span class="paper-meta">EMNLP 2026 Main Conference · Bilibili Inc.</span></p></div><div class="paper-actions"><a class="button button-primary" href="paper.pdf" target="_blank" rel="noreferrer">Open publication <span>↗</span></a><div class="availability"><span class="availability-dot"></span><div><strong>FG-CMB dataset</strong><small>Release forthcoming · currently private</small></div></div></div></div></section>
+  </main>
+  <footer class="site-footer section-wrap"><span>© 2026 KUROKO · Bilibili Inc.</span><span>Severity-aware moderation for the real world.</span></footer>
+</body>
+</html>

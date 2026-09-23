@@ -1,18 +1,9 @@
-<h1 align="center">Rethinking Content Moderation via Severity-Aware Ranking</h1>
+# KUROKO — Rethinking Content Moderation via Severity-Aware Ranking
 
-<!-- <p align="center">
-Fine-Grained Severity Ranking for Scalable Content Moderation
-</p> -->
+Project page for our EMNLP 2026 Main Conference paper from Bilibili Inc.
 
-## 📦 Dataset Availability
+Visit the live site at [bilibili-kuroko.github.io](https://bilibili-kuroko.github.io/) or open the local page in `index.html`.
 
-**FG-CMB** will be publicly released upon paper acceptance.
+## Dataset availability
 
----
-
-
-<p align="center">
-  <img width="766" height="400" alt="data5" src="https://github.com/user-attachments/assets/aab23820-8176-4966-96b6-beb09b323970" />
-  <br>
-  <em>Figure 1. Fine-Grained Content Moderation Benchmark (FG-CMB).</em>
-</p>
+FG-CMB is currently private and will be released at a later date. The page intentionally does not expose training data or experiment dumps.
